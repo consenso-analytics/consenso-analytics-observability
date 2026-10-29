@@ -1,0 +1,64 @@
+{
+  "name": "@consenso-analytics/observability",
+  "version": "0.1.0",
+  "description": "SDK corporativo de observabilidade",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./express": {
+      "types": "./dist/integrations/express/index.d.ts",
+      "require": "./dist/integrations/express/index.js",
+      "default": "./dist/integrations/express/index.js"
+    },
+    "./prisma": {
+      "types": "./dist/integrations/prisma/index.d.ts",
+      "require": "./dist/integrations/prisma/index.js",
+      "default": "./dist/integrations/prisma/index.js"
+    },
+    "./server": {
+      "types": "./dist/servers/metrics-server.d.ts",
+      "require": "./dist/servers/metrics-server.js",
+      "default": "./dist/servers/metrics-server.js"
+    }
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "peerDependencies": {
+    "express": "^4.21.0 || ^5.0.0"
+  },
+  "peerDependenciesMeta": {
+    "express": {
+      "optional": true
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsx examples/dev.ts",
+    "dev:express": "tsx examples/express-demo.ts",
+    "dev:prisma": "tsx examples/prisma-demo.ts",
+    "prepack": "npm run build"
+  },
+  "keywords": [],
+  "author": "Lucas Mendes",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@prometheus-io/client": "^0.16.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.6.5",
+    "express": "^5.3.0",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}
