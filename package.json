@@ -1,6 +1,13 @@
 {
   "name": "@consenso-analytics/observability",
   "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/consenso-analytics/consenso-analytics-observability.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "description": "SDK corporativo de observabilidade",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
