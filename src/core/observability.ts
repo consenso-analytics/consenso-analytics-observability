@@ -100,12 +100,3 @@ export function createObservability(options: ObservabilityOptions) {
 }
 
 export type Observability = ReturnType<typeof createObservability>;
-
-export {
-  createExpressMetrics,
-  metricsRoute,
-} from "../integrations/express/index";
-
-export { startMetricsServer } from "../servers/metrics-server";
-
-export { createPrismaMetrics } from "../integrations/prisma/index";
