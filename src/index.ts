@@ -14,3 +14,8 @@ export { startMetricsServer } from "./servers/metrics-server";
 
 // Prisma
 export { createPrismaMetrics } from "./integrations/prisma/index";
+
+// GraphQL
+export { createGraphqlMetrics } from "./integrations/graphql/index";
+
+export type { GraphqlOperationType } from "./integrations/graphql/index";
